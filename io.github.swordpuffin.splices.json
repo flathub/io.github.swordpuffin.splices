@@ -1,7 +1,7 @@
 {
     "id" : "io.github.swordpuffin.splices",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "47",
+    "runtime-version" : "49",
     "sdk" : "org.gnome.Sdk",
     "command" : "splices",
     "finish-args" : [
@@ -29,7 +29,7 @@
 	      {
 		"type": "git",
 		"url": "https://gitlab.gnome.org/GNOME/libspelling/",
-		"tag": "0.4.7"
+		"tag": "0.4.9"
 	      }
 	    ]
 	},
@@ -41,7 +41,7 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/SwordPuffin/Splices.git",
-                    "tag" : "v1.1.2"
+                    "tag" : "v1.1.4"
                 }
             ]
         }
