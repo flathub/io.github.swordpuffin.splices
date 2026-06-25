@@ -1,47 +1,44 @@
 {
-    "id" : "io.github.swordpuffin.splices",
-    "runtime" : "org.gnome.Platform",
-    "runtime-version" : "49",
-    "sdk" : "org.gnome.Sdk",
-    "command" : "splices",
-    "finish-args" : [
+    "id": "io.github.swordpuffin.splices",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "50",
+    "sdk": "org.gnome.Sdk",
+    "command": "splices",
+    "finish-args": [
         "--share=ipc",
         "--socket=fallback-x11",
         "--device=dri",
         "--socket=wayland"
     ],
-    "cleanup" : [
+    "cleanup": [
         "/include",
         "/lib/pkgconfig",
-        "/man",
         "/share/doc",
-        "/share/gtk-doc",
-        "/share/man",
-        "/share/pkgconfig",
-        "*.la",
-        "*.a"
+        "/share/gir-1.0",
+        "/share/vala"
     ],
-    "modules" : [
+    "modules": [
         {
-	    "name": "libspelling",
-	    "buildsystem": "meson",
-	    "sources": [
-	      {
-		"type": "git",
-		"url": "https://gitlab.gnome.org/GNOME/libspelling/",
-		"tag": "0.4.9"
-	      }
-	    ]
-	},
-        {
-            "name" : "splices",
-            "builddir" : true,
-            "buildsystem" : "meson",
-            "sources" : [
+            "name": "libspelling",
+            "buildsystem": "meson",
+            "sources": [
                 {
-                    "type" : "git",
-                    "url" : "https://github.com/SwordPuffin/Splices.git",
-                    "tag" : "v1.1.4"
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/GNOME/libspelling/",
+                    "tag": "0.4.10",
+                    "commit": "1facdde8e1c0fd72bed806f9a9be2fbec83af5f2"
+                }
+            ]
+        },
+        {
+            "name": "splices",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/SwordPuffin/Splices.git",
+                    "tag": "v1.1.4",
+                    "commit": "74793f427e43cd8b75ae8c52a8e4bb8be2f1aa5f"
                 }
             ]
         }
